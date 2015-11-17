@@ -42,9 +42,14 @@ Router.route('/user', {
   name:     'userDetails',
   template: 'userDetails'
 });
-Houston.menu({
-  'type': 'link',
-  'use': 'http://google.com',
-  'title': 'Google',
-  'target': 'blank'
+
+Router.route('/events', {
+  name:     'events',
+  template: 'events',
+  subscriptions: function() {
+    return [
+      Meteor.subscribe('messages'),
+      Meteor.subscribe('userIds')
+    ];
+  }
 });
