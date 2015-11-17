@@ -42,10 +42,9 @@ Router.route('/user', {
   name:     'userDetails',
   template: 'userDetails'
 });
-/**
- * Router definition for the user details page.
- */
-Router.route('/csanad', {
-  name:     'csanad',
-  template: 'csanad'
+Houston.menu({
+  'type': 'link',
+  'use': 'http://google.com',
+  'title': 'Google',
+  'target': 'blank'
 });
