@@ -1,0 +1,33 @@
+<template name="chatRoom">
+  <div class="chat-room page container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h1 class="text-center">Welcome to the <b>Best Chat App</b></h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <ul class="list-unstyled">
+        {{#each getMessages}}
+          <li class="{{ownMessage userId}} {{applyDimEffect @index}}">
+            <span class="username"><b>{{getDisplayName userId}}</b></span>
+            <span class="message">{{message}}</span>
+          </li>
+        {{/each}}
+        </ul>
+      </div>
+    </div>
+    {{# if currentUser}}
+      <div class="submit-block">
+        <form>
+          <div class="form-group">
+            <textarea class="form-control" name="message" rows="3" placeholder="Type your message here..."></textarea>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary">Send</button>
+          </div>
+        </form>
+      </div>
+    {{/if}}
+  </div>
+</template>
