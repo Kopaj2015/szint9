@@ -2,13 +2,14 @@
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
-        <a class="navbar-brand" href="{{pathFor 'chatRoom'}}">KOPAJ 9. Szint Fogadó iroda</a>
+        <a class="navbar-brand" href="{{pathFor 'list'}}">KOPAJ 9. Szint Fogadó iroda</a>
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="{{pathFor 'userDetails'}}">Események</a></li>
-            <li><a href="{{pathFor 'userDetails'}}">Eredmények</a></li>
+            <li><a href="{{pathFor 'events'}}">Események</a></li>
+            <li><a href="{{pathFor 'results'}}">Eredmények</a></li>
 			{{#if currentUser}}
+				<li><a href="{{pathFor 'userDetails'}}">Adatok</a></li>
 				<li><a href="">Pontszám: 0</a></li>
 			{{/if}}
 			{{> loginButtons}}

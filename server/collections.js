@@ -18,11 +18,12 @@ Meteor.methods({
   /**
    * Save a message to the backend database.
    */
-  addMessage: function(message) {
+  addMessage: function(message, name) {
     if(Meteor.user()) {
       Messages.insert({
         userId:  Meteor.user()._id,
         message: message,
+		name: name,
         createdAt: new Date()
       });
     }
