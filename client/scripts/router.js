@@ -48,7 +48,7 @@ Router.route('/events', {
   template: 'events',
   subscriptions: function() {
     return [
-      Meteor.subscribe('events'),
+      Meteor.subscribe('messages'),
       Meteor.subscribe('userIds')
     ];
   }
@@ -59,7 +59,7 @@ Router.route('/results', {
   template: 'results',
   subscriptions: function() {
     return [
-      Meteor.subscribe('events'),
+      Meteor.subscribe('messages'),
       Meteor.subscribe('userIds')
     ];
   }

@@ -11,23 +11,13 @@
             <div class="col-xs-3 vendeg"><b>Vendég csapat</b></div>
             <div class="col-xs-3 eredmeny">Eredmény</div>
     </div>
+        {{#each getMessages}}
     <div class="row">
-            <div class="col-xs-3">foci</div>
-            <div class="col-xs-3 hazai"><b>9.szint</b></div>
-            <div class="col-xs-3 vendeg"><b>10.szint</b></div>
+            <div class="col-xs-3">{{category}}</div>
+            <div class="col-xs-3 hazai"><b>{{home}}</b></div>
+            <div class="col-xs-3 vendeg"><b>{{visitor}}</b></div>
             <div class="col-xs-3">2:2</div>
     </div>
-    <div class="row">
-            <div class="col-xs-3">kosárlabda</div>
-            <div class="col-xs-3 hazai"><b>9.szint</b></div>
-            <div class="col-xs-3 vendeg"><b>7.szint</b></div>
-            <div class="col-xs-3">68:42</div>
-    </div>
-    <div class="row">
-            <div class="col-xs-3">kézilabda</div>
-            <div class="col-xs-3 hazai"><b>3.szint</b></div>
-            <div class="col-xs-3 vendeg"><b>5.szint</b></div>
-            <div class="col-xs-3">10:2</div>
-    </div>
+        {{/each}} 
   </div>
 </template>
