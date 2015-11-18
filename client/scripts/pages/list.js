@@ -6,8 +6,10 @@ Template.list.events({
    */
   'submit form': function(event) {
     event.preventDefault();
-    Meteor.call('addMessage', event.target.message.value, event.target.name.value);
-    event.target.message.value = '';
+    Meteor.call('addMessage', event.target.category.value, event.target.home.value, event.target.visitor.value);
+	event.target.category.value = '';
+	event.target.home.value = '';
+	event.target.visitor.value = '';
   },
   /**
    * Listen to keypress events on the textarea.
