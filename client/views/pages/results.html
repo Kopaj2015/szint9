@@ -1,21 +1,33 @@
 <template name="results">
-  <div class="chat-room page container">
+  <div class="results page container">
     <div class="row">
       <div class="col-xs-12">
         <h3 class="text-center"><b>Üdvözöllek a 9. Szint Fogadó irodájában.<br>Itt tekintheted meg az eredményeket.</b></h3>
       </div>
     </div>
+    <div class="row reshead">
+            <div class="col-xs-3 eredmeny">Sport kategória</div>
+            <div class="col-xs-3 hazai"><b>Hazai csapat</b></div>
+            <div class="col-xs-3 vendeg"><b>Vendég csapat</b></div>
+            <div class="col-xs-3 eredmeny">Eredmény</div>
+    </div>
     <div class="row">
-      <div class="col-xs-12">
-        <ul class="list-unstyled">
-        {{#each getMessages}}
-          <li class="{{ownMessage userId}} {{applyDimEffect @index}}">
-            <span class="username"><b>{{getDisplayName userId}}</b></span>
-            <span class="message">{{message}}</span>
-          </li>
-        {{/each}}
-        </ul>
-      </div>
+            <div class="col-xs-3">foci</div>
+            <div class="col-xs-3 hazai"><b>9.szint</b></div>
+            <div class="col-xs-3 vendeg"><b>10.szint</b></div>
+            <div class="col-xs-3">2:2</div>
+    </div>
+    <div class="row">
+            <div class="col-xs-3">kosárlabda</div>
+            <div class="col-xs-3 hazai"><b>9.szint</b></div>
+            <div class="col-xs-3 vendeg"><b>7.szint</b></div>
+            <div class="col-xs-3">68:42</div>
+    </div>
+    <div class="row">
+            <div class="col-xs-3">kézilabda</div>
+            <div class="col-xs-3 hazai"><b>3.szint</b></div>
+            <div class="col-xs-3 vendeg"><b>5.szint</b></div>
+            <div class="col-xs-3">10:2</div>
     </div>
   </div>
 </template>
